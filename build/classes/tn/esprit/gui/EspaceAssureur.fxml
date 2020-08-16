@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1070.0" style="-fx-background-color: #12CB06;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.gui.EspaceAssureurController">
+   <center>
+      <Pane prefHeight="600.0" prefWidth="1036.0" style="-fx-background-color: #12CB06;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="activerComptePane" layoutX="16.0" layoutY="67.0" prefHeight="521.0" prefWidth="126.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Button layoutX="-6.0" layoutY="50.0" mnemonicParsing="false" onAction="#sinistre" prefHeight="44.0" prefWidth="138.0" style="-fx-background-color: #12CB06;" text="Sinistres" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="-5.0" layoutY="115.0" mnemonicParsing="false" onAction="#profile" prefHeight="45.0" prefWidth="136.0" style="-fx-background-color: #12CB06;" text="Profile" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="-16.0" layoutY="462.0" mnemonicParsing="false" onAction="#logoutE" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #12CB06;" text="Déconnexion" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="22.0" fitWidth="17.0" layoutY="476.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="http://localhost/gestionassurence/Ressources/logout.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Pane layoutX="16.0" layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="43.0" prefWidth="1034.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="14.0" layoutY="4.0" text="Espace Assureur">
+                     <font>
+                        <Font name="Algerian" size="30.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="closeBtn" fitHeight="30.0" fitWidth="36.0" layoutX="996.0" layoutY="6.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="http://localhost/GestionAssurence/Ressources/close-window.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="sinistrePane" layoutX="153.0" layoutY="68.0" prefHeight="520.0" prefWidth="897.0" style="-fx-background-color: white;">
+               <children>
+                  <TableView fx:id="tabSinistre" layoutX="14.0" layoutY="67.0" onMouseClicked="#SinistreSelected" prefHeight="442.0" prefWidth="745.0">
+                     <columns>
+                        <TableColumn fx:id="type" prefWidth="139.0" text="Type" />
+                        <TableColumn fx:id="Description" prefWidth="168.0" text="Description" />
+                        <TableColumn fx:id="Douverture" prefWidth="113.0" text="Date d'ouverture" />
+                        <TableColumn fx:id="Dfermeture" prefWidth="109.0" text="Date de fermeture" />
+                        <TableColumn fx:id="Lieu" prefWidth="121.0" text="Lieu" />
+                        <TableColumn fx:id="traiter" prefWidth="75.0" text="Traiter" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="deleteBtn" layoutX="773.0" layoutY="124.0" mnemonicParsing="false" onAction="#deleteSinistre" prefHeight="37.0" prefWidth="110.0" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="viewBtn" layoutX="773.0" layoutY="70.0" mnemonicParsing="false" onAction="#updateSinistre" prefHeight="37.0" prefWidth="110.0" style="-fx-background-color: #4a80d6;" text="Consulter" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="773.0" layoutY="473.0" text="Sinistres" textFill="#b90909">
+                     <font>
+                        <Font name="Bauhaus 93" size="28.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="search" layoutX="14.0" layoutY="23.0" prefHeight="30.0" prefWidth="743.0" promptText="Rechercher...">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </opaqueInsets>
+                  </TextField>
+                  <Button layoutX="800.0" layoutY="252.0" mnemonicParsing="false" onAction="#refresh" style="-fx-background-color: #4a80d6;" text="Actualiser" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Pane fx:id="profilePane" layoutX="153.0" layoutY="68.0" prefHeight="520.0" prefWidth="898.0" style="-fx-background-color: white;" visible="false">
+               <children>
+                  <GridPane layoutX="169.0" layoutY="80.0" prefHeight="339.0" prefWidth="513.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="165.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="321.0" minWidth="10.0" prefWidth="202.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="321.0" minWidth="10.0" prefWidth="66.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="321.0" minWidth="10.0" prefWidth="208.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="321.0" minWidth="10.0" prefWidth="202.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Nom">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nameID" GridPane.columnIndex="1" />
+                        <TextField fx:id="phoneID" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="N# Télèphone" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Mot de passe" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pwdID" accessibleRole="PASSWORD_FIELD" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button mnemonicParsing="false" onAction="#updateProfile" prefHeight="25.0" prefWidth="228.0" style="-fx-background-color: #4a80d6;" text="Sauvgarder" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Label text="e-mail" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="emailID" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="AgenceID" text="Agence" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="agenceID" prefHeight="25.0" prefWidth="212.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Prénom" GridPane.columnIndex="3">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="lastnameID" GridPane.columnIndex="4" />
+                     </children>
+                  </GridPane>
+                  <Text fx:id="errorLabel" fill="#ff1313" layoutX="169.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

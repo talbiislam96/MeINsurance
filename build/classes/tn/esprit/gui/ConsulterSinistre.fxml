@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #12CB06;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.gui.ConsulterSinistreController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #12CB06;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="activerComptePane" layoutX="16.0" layoutY="67.0" prefHeight="521.0" prefWidth="729.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <GridPane layoutX="81.0" layoutY="97.0" prefHeight="380.0" prefWidth="353.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Type">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Label text="Description" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Date d'ouverture" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Date de fermeture" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Lieu" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Accident" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="type" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Text>
+                        <Text fx:id="description" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Text>
+                        <Text fx:id="Douverture" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Text>
+                        <Text fx:id="Dfermeture" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Text>
+                        <Text fx:id="lieu" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Text>
+                        <Text fx:id="accident" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Text>
+                     </children>
+                  </GridPane>
+                  <ImageView fx:id="justImageID" fitHeight="152.0" fitWidth="215.0" layoutX="482.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true" />
+                  <GridPane layoutX="81.0" layoutY="35.0" prefHeight="38.0" prefWidth="400.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="91.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="152.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="140.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Dossier de:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="prenomClient" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Text>
+                        <Text fx:id="nomClient" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Text>
+                     </children>
+                  </GridPane>
+                  <Label layoutX="510.0" layoutY="91.0" text="Justificatif">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="509.0" layoutY="400.0" mnemonicParsing="false" onAction="#Traiter" prefHeight="37.0" prefWidth="110.0" style="-fx-background-color: #4a80d6;" text="Traiter" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children></Pane>
+            <Pane layoutX="16.0" layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="43.0" prefWidth="870.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="14.0" layoutY="4.0" text="Dossier Sinnister - Consulter">
+                     <font>
+                        <Font name="Algerian" size="30.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="closeBTN" fitHeight="30.0" fitWidth="36.0" layoutX="826.0" layoutY="7.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="http://localhost/GestionAssurence/Ressources/close-window.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="logoutBTN" fitHeight="30.0" fitWidth="53.0" layoutX="785.0" layoutY="7.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="http://localhost/gestionassurence/Ressources/logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="App.jnlp">
+  <information>
+    <title>App</title>
+    <vendor>Tryvl</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="App.jar" size="122256" download="eager" />
+    <jar href="lib\GMapsFX-2.10.0.jar" size="154471" download="eager" />
+    <jar href="lib\activation.jar" size="55147" download="eager" />
+    <jar href="lib\controlsfx-8.40.14.jar" size="1215643" download="eager" />
+    <jar href="lib\google-maps-services-0.2.6.jar" size="174196" download="eager" />
+    <jar href="lib\mail.jar" size="356519" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="App" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="app.App"  name="App" />
+  <update check="always"/>
+</jnlp>
